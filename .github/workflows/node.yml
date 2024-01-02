@@ -1,4 +1,4 @@
-Name: "Nasa project workflow"
+name: "Nasa project workflow"
 on: 
   push:
     branches: [ master ]
