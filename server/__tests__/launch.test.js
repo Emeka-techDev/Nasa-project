@@ -4,10 +4,12 @@ import request from 'supertest';
 
 import app from '../src/app.js';
 import { mongoConnect, mongoDisconnect } from '../src/services/mongo.js';
+import { loadLaunchData } from '../src/models/launch.models.js';
 
 describe('Launches', () => {
     beforeAll( async () => {
         await mongoConnect();
+        await loadLaunchData();
     })
 
     afterAll( async () => {
